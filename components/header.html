@@ -2,7 +2,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
   <div class="container">
     <!-- Application Logo and Title -->
-    <a class="navbar-brand fw-bold" href="index.html"> AeroTask Pro </a>
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="fa-solid fa-drone"></i> AeroTask Pro
+    </a>
 
     <!-- Responsive hamburger menu -->
     <button
@@ -14,8 +16,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
+    <!-- Center everything in the mobile dropdown -->
+    <div class="collapse navbar-collapse text-center" id="navbarNav">
+      <!-- Center the nav links, and added bottom margin for mobile spacing -->
+      <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item">
           <a class="nav-link" href="tasks.html">Tasks</a>
@@ -31,8 +35,11 @@
         </li>
       </ul>
 
-      <!-- Dark Mode Toggle -->
-      <button class="btn btn-outline-light btn-sm" id="darkModeToggle">
+      <!-- Added top margin to create space from the links when on mobile -->
+      <button
+        class="btn btn-outline-light btn-sm mt-2 mt-lg-0"
+        id="darkModeToggle"
+      >
         <i class="fa-solid fa-moon"></i> Dark Mode
       </button>
     </div>
