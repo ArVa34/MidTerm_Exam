@@ -1,6 +1,9 @@
 // Wait for the document to be ready before running scripts
 $(document).ready(function() {
     
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        $('body').addClass('dark-mode');
+    }
     // Load Header and trigger setup functions afterward
     $("#header-placeholder").load("components/header.html", function() {
         setupDarkMode();
@@ -30,20 +33,28 @@ function setupDarkMode() {
 }
 
 // Nav Bar Active State Logic (Spy)
-function highlightActivePage() {
-    // 1. Get the current filename from the URL (e.g., "tasks.html")
-    let currentPath = window.location.pathname;
-    let currentPage = currentPath.split("/").pop();
-    
-    // Default to index.html if we are at the root domain
-    if (currentPage === "") {
-        currentPage = "index.html";
+function setupDarkMode() {
+    let toggleBtn = $('#darkModeToggle');
+    let icon = toggleBtn.find('i');
+
+    // 1. Set the correct icon on page load based on current mode
+    if ($('body').hasClass('dark-mode')) {
+        icon.removeClass('fa-moon').addClass('fa-sun');
+    } else {
+        icon.removeClass('fa-sun').addClass('fa-moon');
     }
 
-    // 2. Loop through all nav links and add the active class to the matching one
-    $('.nav-link').each(function() {
-        if ($(this).attr('href') === currentPage) {
-            $(this).addClass('active');
+    // 2. Handle the click event
+    toggleBtn.on('click', function() {
+        $('body').toggleClass('dark-mode');
+        
+        // Change icon and save preference to browser memory
+        if ($('body').hasClass('dark-mode')) {
+            icon.removeClass('fa-moon').addClass('fa-sun');
+            localStorage.setItem('darkMode', 'enabled'); 
+        } else {
+            icon.removeClass('fa-sun').addClass('fa-moon');
+            localStorage.setItem('darkMode', 'disabled'); 
         }
     });
 }
