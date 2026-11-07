@@ -1,3 +1,5 @@
+//This file contains all the code for header , footer , dark mode implemetaion + browser memory for all pages , along with a sxroll to top logic for the footer
+
 // Wait for the document to be ready before running scripts
 $(document).ready(function() {
     
