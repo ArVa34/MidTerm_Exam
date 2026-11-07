@@ -19,22 +19,7 @@ $(document).ready(function() {
 
 });
 
-// Dark mode toggle 
-function setupDarkMode() {
-    $('#darkModeToggle').on('click', function() {
-        $('body').toggleClass('dark-mode');
-        
-        // Change the icon from moon to sun based on the mode
-        let icon = $(this).find('i');
-        if ($('body').hasClass('dark-mode')) {
-            icon.removeClass('fa-moon').addClass('fa-sun');
-        } else {
-            icon.removeClass('fa-sun').addClass('fa-moon');
-        }
-    });
-}
-
-// Nav Bar Active State Logic (Spy)
+// Dark mode toggle & Browser Memory Logic
 function setupDarkMode() {
     let toggleBtn = $('#darkModeToggle');
     let icon = toggleBtn.find('i');
@@ -46,8 +31,8 @@ function setupDarkMode() {
         icon.removeClass('fa-sun').addClass('fa-moon');
     }
 
-    // 2. Handle the click event
-    toggleBtn.on('click', function() {
+    // 2. Handle the click event (Using .off() to prevent duplicate clicks)
+    toggleBtn.off('click').on('click', function() {
         $('body').toggleClass('dark-mode');
         
         // Change icon and save preference to browser memory
@@ -61,6 +46,28 @@ function setupDarkMode() {
     });
 }
 
+// Nav Bar Active State Logic (Spy)
+function highlightActivePage() {
+    // Extract the current filename from the URL
+    let path = window.location.pathname;
+    let page = path.split("/").pop();
+    
+    // Default to index.html if at the root domain
+    if (page === "") {
+        page = "index.html";
+    }
+
+    // Compare each nav link's href to the current page
+    $('.navbar-nav .nav-link').each(function() {
+        let href = $(this).attr('href');
+        
+        if (href === page) {
+            $(this).addClass('active');
+        } else {
+            $(this).removeClass('active');
+        }
+    });
+}
 // Scroll to Top Logic
 function setupScrollToTop() {
     // Listen for a click on the class we added to the footer title
