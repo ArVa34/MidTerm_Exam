@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fleet Status | AeroTask Pro</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Monitor your drone fleet in real-time. View live telemetry, track active missions, and manage ground maintenance via the AeroTask Pro Command Center."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="AeroTask Pro" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://aerotask.arvatech.click/fleet.html"
+    />
+    <meta property="og:title" content="Fleet Status | AeroTask Pro" />
+    <meta
+      property="og:description"
+      content="Monitor your drone fleet in real-time. View live telemetry, track active missions, and manage ground maintenance via the AeroTask Pro Command Center."
+    />
+    <!-- Social Preview Image -->
+    <meta
+      property="og:image"
+      content="https://aerotask.arvatech.click/images/social_preview.webp"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://aerotask.arvatech.click/fleet.html"
+    />
+    <meta name="twitter:title" content="Fleet Status | AeroTask Pro" />
+    <meta
+      name="twitter:description"
+      content="Monitor your drone fleet in real-time. View live telemetry, track active missions, and manage ground maintenance via the AeroTask Pro Command Center."
+    />
+    <!-- Social Preview Image -->
+    <meta
+      name="twitter:image"
+      content="https://aerotask.arvatech.click/images/social_preview.webp"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="images/logo.webp" />
+
+    <!-- Core Stylesheets -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css?v=7" />
+
+    <!-- Core Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+
+    <!-- Core App Logic & Fleet Logic -->
+    <script src="app.js?v=7" defer></script>
+    <script src="fleet.js?v=7" defer></script>
+  </head>
+  <body class="d-flex flex-column min-vh-100 bg-light">
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <main class="container my-5 flex-grow-1">
+      <!-- Σελίδα Τίτλου -->
+      <div class="row mb-4 border-bottom pb-3">
+        <div class="col-12 d-flex justify-content-between align-items-center">
+          <div>
+            <h1 class="fw-bold mb-1">
+              <i class="fa-solid fa-satellite-dish text-primary"></i> Command
+              Center
+            </h1>
+            <p class="text-muted mb-0">
+              Live operations and ground maintenance control.
+            </p>
+          </div>
+          <!-- Κεντρικός διακόπτης (Οπτικό στοιχείο) -->
+          <span class="badge bg-success fs-6 px-3 py-2"
+            ><i class="fa-solid fa-wifi me-2"></i>Link Active</span
+          >
+        </div>
+      </div>
+
+      <!-- SPLIT LAYOUT: The Field (Left) vs The Hangar (Right) -->
+      <div class="row g-4 mb-5">
+        <!-- ==========================================
+             LEFT COLUMN: THE FIELD (Live Operations)
+             ========================================== -->
+        <div class="col-lg-7">
+          <h4 class="fw-bold mb-3">
+            <i class="fa-solid fa-plane-departure text-primary"></i> The Field
+          </h4>
+
+          <!-- 1. Drone ID Cards Grid -->
+          <div class="row g-3 mb-4">
+            <!-- Drone 1 -->
+            <div class="col-md-6">
+              <div
+                class="card border-0 shadow-sm border-start border-4 border-success h-100"
+              >
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <h5 class="fw-bold mb-0">Alpha-1</h5>
+                    <span class="badge bg-success">Airborne</span>
+                  </div>
+                  <p class="small text-muted mb-3">
+                    <i class="fa-solid fa-user me-1"></i> Pilot: I. Arvanitakis
+                    (Mapping)
+                  </p>
+
+                  <div
+                    class="d-flex justify-content-between small fw-bold mb-1"
+                  >
+                    <span>Battery</span> <span>85%</span>
+                  </div>
+                  <div class="progress" style="height: 8px">
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      style="width: 85%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Drone 2 -->
+            <div class="col-md-6">
+              <div
+                class="card border-0 shadow-sm border-start border-4 border-danger h-100"
+              >
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <h5 class="fw-bold mb-0">Bravo-2</h5>
+                    <span class="badge bg-danger">Returning</span>
+                  </div>
+                  <p class="small text-muted mb-3">
+                    <i class="fa-solid fa-user me-1"></i> Pilot: A. Sampou
+                    (Sector 4)
+                  </p>
+
+                  <div
+                    class="d-flex justify-content-between small fw-bold mb-1 text-danger"
+                  >
+                    <span>Battery</span> <span>15%</span>
+                  </div>
+                  <div class="progress" style="height: 8px">
+                    <div
+                      class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+                      role="progressbar"
+                      style="width: 15%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Dark Mode Live Terminal Log -->
+          <div class="card border-0 shadow-sm bg-dark text-light">
+            <div
+              class="card-header border-secondary border-bottom border-opacity-25 d-flex justify-content-between align-items-center"
+            >
+              <span class="fw-bold small font-monospace text-success"
+                ><i class="fa-solid fa-terminal me-2"></i>SYS_LOG_TERMINAL</span
+              >
+              <span
+                class="spinner-grow spinner-grow-sm text-success"
+                role="status"
+              ></span>
+            </div>
+            <div
+              class="card-body p-3 font-monospace small"
+              style="height: 180px; overflow-y: auto"
+            >
+              <div class="mb-2 text-muted">
+                [10:45:02] SYS: Link connection established.
+              </div>
+              <div class="mb-2 text-success">
+                [10:46:15] NET: Alpha-1 telemetry nominal.
+              </div>
+              <div class="mb-2 text-warning">
+                [10:48:30] WRN: Wind speeds increasing in Sector 2.
+              </div>
+              <div class="mb-2 text-danger fw-bold">
+                [10:52:11] ERR: Bravo-2 battery critical (15%). Return-To-Home
+                initiated.
+              </div>
+              <div class="mb-2 text-info">
+                [10:55:00] INF: Alpha-7 maintenance clearance approved.
+              </div>
+              <div class="mb-0 text-muted">
+                > Awaiting input... <span class="blink">_</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             RIGHT COLUMN: THE HANGAR (Ground Ops)
+             ========================================== -->
+        <div class="col-lg-5">
+          <h4 class="fw-bold mb-3">
+            <i class="fa-solid fa-warehouse text-secondary"></i> The Hangar
+          </h4>
+
+          <!-- Drone Models Accordion -->
+          <div class="card shadow-sm border-0 mb-4">
+            <div class="card-header bg-white fw-bold py-3">
+              <i class="fa-solid fa-list text-primary me-2"></i> Registered
+              Hardware
+            </div>
+            <div class="card-body p-0">
+              <div class="accordion accordion-flush" id="droneAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button fw-bold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                    >
+                      DJI Matrice 300 RTK
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#droneAccordion"
+                  >
+                    <div class="accordion-body text-muted small bg-light">
+                      <strong>Payload:</strong> 2.7 kg |
+                      <strong>Use:</strong> Surveying<br />
+                      Assigned to heavy-duty topographical missions.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed fw-bold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                    >
+                      Autel EVO II Dual
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#droneAccordion"
+                  >
+                    <div class="accordion-body text-muted small bg-light">
+                      <strong>Payload:</strong> Thermal |
+                      <strong>Use:</strong> Night Ops<br />
+                      Equipped with 640x512 thermal sensor.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Maintenance Logs Table -->
+          <div class="card shadow-sm border-0">
+            <div class="card-header bg-white fw-bold py-3">
+              <i class="fa-solid fa-clipboard-check text-warning me-2"></i>
+              Maintenance Queue
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0 text-sm">
+                <thead class="table-light small">
+                  <tr>
+                    <th>Unit</th>
+                    <th>Task</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="fw-bold">Bravo-1</td>
+                    <td>Sensor Calib.</td>
+                    <td><span class="badge bg-success">Cleared</span></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">Alpha-7</td>
+                    <td>Motor (200hr)</td>
+                    <td>
+                      <button
+                        class="btn btn-sm btn-outline-warning py-0 px-2"
+                        data-action="resolve-maintenance"
+                      >
+                        Pending
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- CSS για το εφέ που αναβοσβήνει στο terminal -->
+    <style>
+      .blink {
+        animation: blinker 1s linear infinite;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </body>
+</html>
