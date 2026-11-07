@@ -1,13 +1,32 @@
-/* Dark Mode  */
+/* ========================
+   Dark Mode Styles 
+   ======================== */
 body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #121212 !important;
+    color: #ffffff !important;
 }
 
 body.dark-mode .bg-light,
 body.dark-mode .navbar,
 body.dark-mode .footer,
-body.dark-mode .card {
+body.dark-mode .card,
+body.dark-mode .card-header,
+body.dark-mode .accordion-item,
+body.dark-mode .accordion-button,
+body.dark-mode .list-group-item,
+body.dark-mode .card-body input,  
+body.dark-mode .card-body textarea,
+body.dark-mode .modal-content {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #ffffff !important;
+}
+
+/* Fix for Tables in Dark Mode */
+body.dark-mode .table,
+body.dark-mode .table th,
+body.dark-mode .table td,
+body.dark-mode .table thead th {
     background-color: #1e1e1e !important;
     border-color: #333 !important;
     color: #ffffff !important;
@@ -28,7 +47,14 @@ body.dark-mode .border-top {
     border-color: #333 !important;
 }
 
-/* Card Styling */
+/* Fix accordion button text in dark mode */
+body.dark-mode .accordion-button::after {
+    filter: invert(1);
+}
+
+/* ========================
+   Card Hover Animations 
+   ======================== */
 .card {
     transition: transform 0.2s ease-in-out;
 }
