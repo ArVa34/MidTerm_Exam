@@ -129,3 +129,40 @@ body.dark-mode .alert-warning { color: #ffda6a; }
 body.dark-mode .feature-icon.bg-primary { background-color: rgba(13, 110, 253, 0.2) !important; }
 body.dark-mode .feature-icon.bg-success { background-color: rgba(25, 135, 84, 0.2) !important; }
 body.dark-mode .feature-icon.bg-warning { background-color: rgba(255, 193, 7, 0.2) !important; }
+
+/* ========================
+   Navbar Active State & Opacity 
+   ======================== */
+.navbar-nav .nav-link {
+    opacity: 0.5; /* Dims inactive links */
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    opacity: 0.8;
+}
+
+/* Highlights the active page */
+.navbar-nav .nav-link.active {
+    opacity: 1 !important;
+    font-weight: 700;
+    color: #0d6efd !important; 
+}
+
+/* Dark mode adjustment for the active link */
+body.dark-mode .navbar-nav .nav-link.active {
+    color: #6ea8fe !important; 
+}
+
+/* ========================
+   Dark Mode: Social Media / Outline Buttons
+   ======================== */
+body.dark-mode .btn-outline-dark {
+    color: #f8f9fa !important;
+    border-color: #f8f9fa !important;
+}
+
+body.dark-mode .btn-outline-dark:hover {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+}
