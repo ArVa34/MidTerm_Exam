@@ -155,7 +155,12 @@
                 </div>
                 <div class="mb-3">
                   <label for="taskPriority" class="form-label">Priority</label>
-                  <select class="form-select" name="taskPriority" required>
+                  <select
+                    class="form-select"
+                    id="taskPriority"
+                    name="taskPriority"
+                    required
+                  >
                     <option value="Low">Low</option>
                     <option value="Medium">Medium</option>
                     <option value="High">High</option>
@@ -180,13 +185,21 @@
                 data-input="search"
                 placeholder="Live search..."
               />
-              <select class="form-select w-auto" data-select="filter-status">
+              <select
+                class="form-select w-auto"
+                data-select="filter-status"
+                aria-label="Filter tasks by status"
+              >
                 <option value="all">All Statuses</option>
                 <option value="pending">Pending</option>
                 <option value="in-progress">In Progress</option>
                 <option value="completed">Completed</option>
               </select>
-              <select class="form-select w-auto" data-select="sort">
+              <select
+                class="form-select w-auto"
+                data-select="sort"
+                aria-label="Sort tasks"
+              >
                 <option value="date-asc">Date (Earliest)</option>
                 <option value="date-desc">Date (Latest)</option>
                 <option value="name-asc">Name (A-Z)</option>
