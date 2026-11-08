@@ -63,7 +63,7 @@ $(document).ready(function() {
         $(this).removeClass('is-invalid');
     });
 
-    // Helper function to trigger the modal strictly without getElementById
+    // Helper function to trigger the modal.
     function showSuccessModal(userName, form, submitBtn, originalBtnHtml) {
         // Set custom success text
         $('#modalConfirmationText').text(`Thank you, ${userName}! Your message was securely transmitted and a verification email has been sent to your inbox.`);
