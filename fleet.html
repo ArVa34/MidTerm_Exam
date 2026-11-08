@@ -72,11 +72,16 @@
     <script src="fleet.js?v=7" defer></script>
   </head>
   <body class="d-flex flex-column min-vh-100 bg-light">
+    <script>
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+      }
+    </script>
+
     <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
 
     <main class="container my-5 flex-grow-1">
-      <!-- Σελίδα Τίτλου -->
       <div class="row mb-4 border-bottom pb-3">
         <div class="col-12 d-flex justify-content-between align-items-center">
           <div>
@@ -88,7 +93,6 @@
               Live operations and ground maintenance control.
             </p>
           </div>
-          <!-- Κεντρικός διακόπτης (Οπτικό στοιχείο) -->
           <span class="badge bg-success fs-6 px-3 py-2"
             ><i class="fa-solid fa-wifi me-2"></i>Link Active</span
           >
@@ -325,7 +329,6 @@
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <!-- CSS για το εφέ που αναβοσβήνει στο terminal -->
     <style>
       .blink {
         animation: blinker 1s linear infinite;
