@@ -166,3 +166,18 @@ body.dark-mode .btn-outline-dark:hover {
     background-color: #f8f9fa !important;
     color: #212529 !important;
 }
+
+/* Reserves space for the navbar before jQuery loads it */
+#header-placeholder {
+    min-height: 76px; /* Adjust this to match your navbar's exact height */
+}
+
+/* Smooth fade-in on page load */
+body {
+    animation: quickFade 0.25s ease-in-out forwards;
+}
+
+@keyframes quickFade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
