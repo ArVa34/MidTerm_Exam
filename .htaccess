@@ -3,3 +3,5 @@ ErrorDocument 404 /404.html
 RewriteEngine On
 
 RewriteRule ^home/?$ /index.html [L]
+
+RewriteRule ^report/?$ /report.pdf [L]
