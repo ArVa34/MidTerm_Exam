@@ -393,23 +393,6 @@ function executeKanbanTransfer(taskId, newStatus) {
     }
 }
 
-function executeKanbanTransfer(taskId, newStatus) {
-    const taskIndex = tasks.findIndex(t => t.id === taskId);
-    if (taskIndex > -1) {
-        // Update status, save, and render
-        tasks[taskIndex].status = newStatus;
-        saveTasks();
-        renderTasks(); 
-        
-        // Hide the modal after successful transfer 
-        const modalElement = document.querySelector('#moveTaskModal');
-        const modalInstance = bootstrap.Modal.getInstance(modalElement);
-        if (modalInstance) {
-            modalInstance.hide();
-        }
-    }
-}
-
 // Performs the actual deletion when modal is confirmed 
 function executeDeleteTask(event) {
     const taskId = event.target.getAttribute('data-target-id');
