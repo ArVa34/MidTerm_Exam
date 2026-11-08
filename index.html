@@ -186,17 +186,28 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm feature-card bg-white">
-            <div class="card-body p-4">
+          <div
+            class="card h-100 border-0 shadow-sm feature-card bg-white position-relative overflow-hidden"
+          >
+            <!-- Task Analytics Coming Soon -->
+            <div
+              class="position-absolute top-0 end-0 bg-danger text-white px-3 py-1 fw-bold rounded-bottom-start shadow-sm"
+              style="font-size: 0.8rem; z-index: 10"
+            >
+              COMING SOON
+            </div>
+
+            <div class="card-body p-4 opacity-75">
               <div
-                class="feature-icon bg-warning bg-opacity-10 text-warning mb-3 mx-auto rounded-circle d-flex align-items-center justify-content-center"
+                class="feature-icon bg-secondary bg-opacity-10 text-secondary mb-3 mx-auto rounded-circle d-flex align-items-center justify-content-center"
                 style="width: 70px; height: 70px"
               >
                 <i class="fa-solid fa-chart-pie fa-2x"></i>
               </div>
-              <h4 class="fw-bold">Task Analytics</h4>
+              <h4 class="fw-bold text-muted">Task Analytics</h4>
               <p class="text-muted small">
-                Monitor pending operations through interactive dashboards.
+                Interactive dashboards for tracking completed vs. pending tasks.
+                Currently in development by Mission Control.
               </p>
             </div>
           </div>
