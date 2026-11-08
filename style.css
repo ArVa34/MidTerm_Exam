@@ -1,6 +1,17 @@
-/* ========================
-   Dark Mode Styles 
-   ======================== */
+/* =========================================
+   TABLE OF CONTENTS
+   =========================================
+   1. Base Dark Mode Styles
+   2. Dark Mode: Typography & Tables
+   3. Dark Mode: Forms, Inputs & UI Elements
+   4. Layout Enhancements (Header & Animations)
+   5. Homepage Specific Styles (Hero & Cards)
+   6. Tasks Page & Kanban Board Styles
+   ========================================= */
+
+/* =========================================
+   1. Base Dark Mode Styles
+   ========================================= */
 body.dark-mode {
     background-color: #121212 !important;
     color: #ffffff !important;
@@ -14,24 +25,15 @@ body.dark-mode .card-header,
 body.dark-mode .accordion-item,
 body.dark-mode .accordion-button,
 body.dark-mode .list-group-item,
-body.dark-mode .card-body input,  
-body.dark-mode .card-body textarea,
 body.dark-mode .modal-content {
     background-color: #1e1e1e !important;
     border-color: #333 !important;
     color: #ffffff !important;
 }
 
-/* Fix for Tables in Dark Mode */
-body.dark-mode .table,
-body.dark-mode .table th,
-body.dark-mode .table td,
-body.dark-mode .table thead th {
-    background-color: #1e1e1e !important;
-    border-color: #333 !important;
-    color: #ffffff !important;
-}
-
+/* =========================================
+   2. Dark Mode: Typography & Tables
+   ========================================= */
 body.dark-mode .text-dark,
 body.dark-mode .text-muted {
     color: #cccccc !important;
@@ -47,14 +49,81 @@ body.dark-mode .border-top {
     border-color: #333 !important;
 }
 
-/* Fix accordion button text in dark mode */
+body.dark-mode .table,
+body.dark-mode .table th,
+body.dark-mode .table td,
+body.dark-mode .table thead th {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #ffffff !important;
+}
+
+/* =========================================
+   3. Dark Mode: Forms, Inputs & UI Elements
+   ========================================= */
+body.dark-mode .card-body input,  
+body.dark-mode .card-body textarea,
+body.dark-mode select.form-select {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #ffffff !important;
+}
+
+/* Fix input placeholder text visibility in dark mode */
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #888888 !important;
+}
+
 body.dark-mode .accordion-button::after {
     filter: invert(1);
 }
 
-/* ========================
-   Card Hover Animations 
-   ======================== */
+body.dark-mode .btn-outline-dark {
+    color: #f8f9fa !important;
+    border-color: #f8f9fa !important;
+}
+
+body.dark-mode .btn-outline-dark:hover {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+}
+
+/* =========================================
+   4. Layout Enhancements (Header & Animations)
+   ========================================= */
+#header-placeholder {
+    min-height: 56px; 
+}
+
+body {
+    animation: quickFade 0.25s ease-in-out forwards;
+}
+
+@keyframes quickFade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.navbar-nav .nav-link {
+    opacity: 0.5;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    opacity: 0.8;
+}
+
+.navbar-nav .nav-link.active {
+    opacity: 1 !important;
+    font-weight: 700;
+    color: #0d6efd !important; 
+}
+
+body.dark-mode .navbar-nav .nav-link.active {
+    color: #6ea8fe !important; 
+}
+
 .card {
     transition: transform 0.2s ease-in-out;
 }
@@ -63,11 +132,9 @@ body.dark-mode .accordion-button::after {
     transform: translateY(-5px);
 }
 
-/* ========================
-   Homepage Enhancements
-   ======================== */
-
-/* Hero Section with Tech Gradient */
+/* =========================================
+   5. Homepage Specific Styles (Hero & Cards)
+   ========================================= */
 .hero-section {
     background: linear-gradient(135deg, #1a2a6c 0%, #112 100%);
     background-size: cover;
@@ -75,7 +142,6 @@ body.dark-mode .accordion-button::after {
     min-height: 400px;
 }
 
-/* Radar Animation Effect */
 .radar-container {
     position: relative;
     width: 100px;
@@ -102,7 +168,6 @@ body.dark-mode .accordion-button::after {
     to { transform: rotate(360deg); }
 }
 
-/* Feature Cards Hover */
 .feature-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -111,9 +176,6 @@ body.dark-mode .accordion-button::after {
     box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
 }
 
-/* ========================
-   Dark Mode Adjustments for Homepage
-   ======================== */
 body.dark-mode .feature-card,
 body.dark-mode .alert-success,
 body.dark-mode .alert-danger,
@@ -130,54 +192,33 @@ body.dark-mode .feature-icon.bg-primary { background-color: rgba(13, 110, 253, 0
 body.dark-mode .feature-icon.bg-success { background-color: rgba(25, 135, 84, 0.2) !important; }
 body.dark-mode .feature-icon.bg-warning { background-color: rgba(255, 193, 7, 0.2) !important; }
 
-/* ========================
-   Navbar Active State & Opacity 
-   ======================== */
-.navbar-nav .nav-link {
-    opacity: 0.5; /* Dims inactive links */
-    transition: opacity 0.3s ease, color 0.3s ease;
+/* =========================================
+   6. Tasks Page & Kanban Board Styles
+   ========================================= */
+body.dark-mode .kanban-column .card {
+    background-color: #2c2c2c !important;
+    border: 1px solid #444 !important;
 }
 
-.navbar-nav .nav-link:hover {
-    opacity: 0.8;
+body.dark-mode .kanban-column .card:hover {
+    border-color: #0d6efd !important;
 }
 
-/* Highlights the active page */
-.navbar-nav .nav-link.active {
-    opacity: 1 !important;
-    font-weight: 700;
-    color: #0d6efd !important; 
+body.dark-mode .kanban-column .card,
+body.dark-mode .kanban-column .card h6 {
+    color: #ffffff !important;
 }
 
-/* Dark mode adjustment for the active link */
-body.dark-mode .navbar-nav .nav-link.active {
-    color: #6ea8fe !important; 
+body.dark-mode .kanban-column .card small {
+    color: #aaaaaa !important;
 }
 
-/* ========================
-   Dark Mode: Social Media / Outline Buttons
-   ======================== */
-body.dark-mode .btn-outline-dark {
-    color: #f8f9fa !important;
-    border-color: #f8f9fa !important;
+/* Warning summary card styling fixes */
+body.dark-mode .bg-warning {
+    background-color: #ffc107 !important; /* Forces the background to stay yellow */
+    color: #212529 !important; /* Forces text to be dark grey */
 }
-
-body.dark-mode .btn-outline-dark:hover {
-    background-color: #f8f9fa !important;
-    color: #212529 !important;
-}
-
-/* Reserves space for the navbar before jQuery loads it */
-#header-placeholder {
-    min-height: 56px; 
-}
-
-/* Smooth fade-in on page load */
-body {
-    animation: quickFade 0.25s ease-in-out forwards;
-}
-
-@keyframes quickFade {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+body.dark-mode .bg-warning h5,
+body.dark-mode .bg-warning h2 {
+    color: #212529 !important; /* Forces headers to be dark grey */
 }
