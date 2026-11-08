@@ -79,6 +79,12 @@
     <script src="contact.js?v=6" defer></script>
   </head>
   <body class="d-flex flex-column min-vh-100 bg-light">
+    <script>
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+      }
+    </script>
+
     <div id="header-placeholder"></div>
 
     <main class="container my-5 flex-grow-1">
