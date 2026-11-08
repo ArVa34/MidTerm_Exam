@@ -81,23 +81,47 @@
     <div id="header-placeholder"></div>
 
     <main class="container my-5">
+      <!-- 1. About Section  -->
       <div class="row mb-5 text-center">
         <div class="col-lg-8 mx-auto">
           <h1 class="fw-bold mb-3">About AeroTask Pro</h1>
-          <p class="lead text-muted">
+          <p class="lead text-muted mb-4">
             Born from the need to streamline complex aerial operations, AeroTask
-            Pro is the premier task management platform designed specifically
-            for commercial drone operators. We bridge the gap between field
-            pilots and mission control.
+            Pro is a comprehensive task management platform designed
+            specifically for commercial drone operators. We bridge the gap
+            between field pilots and mission control.
           </p>
+          <!-- Features List -->
+          <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+            <span
+              class="badge bg-primary bg-opacity-10 text-primary border border-primary px-3 py-2"
+              ><i class="fa-solid fa-list-check me-2"></i>Kanban Task
+              Management</span
+            >
+            <span
+              class="badge bg-primary bg-opacity-10 text-primary border border-primary px-3 py-2"
+              ><i class="fa-solid fa-cloud-sun me-2"></i>Live Weather API</span
+            >
+            <span
+              class="badge bg-primary bg-opacity-10 text-primary border border-primary px-3 py-2"
+              ><i class="fa-solid fa-satellite-dish me-2"></i>Fleet
+              Telemetry</span
+            >
+            <span
+              class="badge bg-primary bg-opacity-10 text-primary border border-primary px-3 py-2"
+              ><i class="fa-brands fa-html5 me-2"></i>Persistent Local
+              Storage</span
+            >
+          </div>
         </div>
       </div>
 
+      <!-- 4. Carousel -->
       <div class="row mb-5">
         <div class="col-lg-10 mx-auto">
           <div
             id="droneCarousel"
-            class="carousel slide shadow rounded overflow-hidden"
+            class="carousel slide shadow rounded overflow-hidden border"
             data-bs-ride="carousel"
           >
             <div class="carousel-inner">
@@ -109,10 +133,10 @@
                   style="height: 400px; object-fit: cover"
                 />
                 <div
-                  class="carousel-caption d-none d-md-block bg-dark bg-opacity-65 rounded p-2"
+                  class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3"
                 >
-                  <h5>Precision Mapping</h5>
-                  <p>
+                  <h5>Purpose: Precision Mapping</h5>
+                  <p class="mb-0">
                     Execute flawless topographical surveys with our mission
                     planning tools.
                   </p>
@@ -126,13 +150,33 @@
                   style="height: 400px; object-fit: cover"
                 />
                 <div
-                  class="carousel-caption d-none d-md-block bg-dark bg-opacity-65 rounded p-2"
+                  class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3"
                 >
-                  <h5>Fleet Maintenance</h5>
-                  <p>
+                  <h5>Feature: Fleet Maintenance</h5>
+                  <p class="mb-0">
                     Track battery life and motor health to keep your fleet
                     airborne.
                   </p>
+                </div>
+              </div>
+              <!-- Testimonial Slide -->
+              <div class="carousel-item">
+                <div
+                  class="d-flex align-items-center justify-content-center bg-primary bg-opacity-10 w-100"
+                  style="height: 400px"
+                >
+                  <div class="text-center px-5">
+                    <i
+                      class="fa-solid fa-quote-left fa-3x text-primary opacity-50 mb-3"
+                    ></i>
+                    <h4 class="text-dark fst-italic">
+                      "Building AeroTask Pro allowed us to master Bootstrap 5,
+                      asynchronous APIs, and persistent state management."
+                    </h4>
+                    <p class="text-muted mt-3 fw-bold">
+                      - The Development Team
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -170,15 +214,15 @@
 
         <div class="col-md-4 mb-4">
           <div class="card h-100 shadow-sm border-0">
-            <div class="card-body">
+            <div class="card-body p-4">
               <img
                 src="images/IMG_2765.JPG"
-                class="rounded-circle mb-3 shadow-sm"
+                class="rounded-circle mb-3 shadow-sm border border-3 border-primary"
                 alt="Ioannis Arvanitakis"
                 style="width: 120px; height: 120px; object-fit: cover"
               />
               <h5 class="card-title fw-bold">Ioannis Arvanitakis</h5>
-              <h6 class="text-primary mb-3">Chief Pilot</h6>
+              <h6 class="text-primary mb-3">Chief Pilot & Founder</h6>
               <p class="card-text text-muted small">
                 Ioannis oversees all flight operations and ensures strict
                 compliance with aviation regulations across all active missions.
@@ -189,19 +233,18 @@
 
         <div class="col-md-4 mb-4">
           <div class="card h-100 shadow-sm border-0">
-            <div class="card-body">
+            <div class="card-body p-4">
               <img
-                src="images/IMG_2765.JPG"
-                class="rounded-circle mb-3 shadow-sm"
-                alt="Ioannis Arvanitakis"
+                src="images/andreas.jpg"
+                class="rounded-circle mb-3 shadow-sm border border-3 border-success"
+                alt="Maria Papas"
                 style="width: 120px; height: 120px; object-fit: cover"
               />
-              <h5 class="card-title fw-bold">Victim 2</h5>
-              <h6 class="text-success mb-3">Lead Engineer</h6>
+              <h5 class="card-title fw-bold">Andreas Sampou</h5>
+              <h6 class="text-success mb-3">Lead UI/UX Designer</h6>
               <p class="card-text text-muted small">
-                Victim 2 manages the hardware division, coordinating
-                preventative maintenance and firmware patches for the entire
-                drone fleet.
+                Andreas designed the responsive dashboard interfaces and
+                engineered the user experience for seamless ground control.
               </p>
             </div>
           </div>
@@ -209,18 +252,18 @@
 
         <div class="col-md-4 mb-4">
           <div class="card h-100 shadow-sm border-0">
-            <div class="card-body">
+            <div class="card-body p-4">
               <img
-                src="images/IMG_2765.JPG"
-                class="rounded-circle mb-3 shadow-sm"
-                alt="Ioannis Arvanitakis"
+                src="images/ntinos.jpg"
+                class="rounded-circle mb-3 shadow-sm border border-3 border-warning"
+                alt="Nikos Georgiou"
                 style="width: 120px; height: 120px; object-fit: cover"
               />
-              <h5 class="card-title fw-bold">Victim 3</h5>
-              <h6 class="text-warning mb-3">Data Analyst</h6>
+              <h5 class="card-title fw-bold">Ntinos Gou</h5>
+              <h6 class="text-warning mb-3">Senior Web Developer</h6>
               <p class="card-text text-muted small">
-                Victim 3 processes the telemetry and survey data, transforming
-                raw drone outputs into actionable client deliverables.
+                Ntinos integrated the Open-Meteo API and manages the persistent
+                local storage architecture for our fleet analytics.
               </p>
             </div>
           </div>
